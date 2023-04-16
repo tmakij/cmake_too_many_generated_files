@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1...3.26)
+cmake_minimum_required(VERSION 3.26)
 
 project(TooBigCMake LANGUAGES C)
 
@@ -8,6 +8,6 @@ add_custom_command(OUTPUT ${SOURCES}
 	COMMAND "true"
 )
 
-include_directories(src)
-
 add_library(TooBigCMake ${SOURCES})
+
+target_include_directories(TooBigCMake PUBLIC src)
